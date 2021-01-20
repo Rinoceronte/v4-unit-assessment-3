@@ -30,9 +30,13 @@ class App extends Component {
   }
 
   addBook(book){
-    this.setState({
-      bookshelf: [...this.state.bookshelf, book]
-    });
+    if(this.state.bookshelf.includes(book))
+    {}
+    else{
+      this.setState({
+        bookshelf: [...this.state.bookshelf, book]
+      });
+    }
     // console.log(this.state.bookshelf);
   }
 
